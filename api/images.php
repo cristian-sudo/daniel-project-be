@@ -289,7 +289,7 @@ function handleDelete() {
     }
     
     // Percorso del file
-    $file_path = __DIR__ . '/../' . $image_data['percorso_immagine'];
+    $file_path = __DIR__ . '/backend/' . $image_data['percorso_immagine'];
     
     // Elimina l'immagine dal database
     if ($gym_image->delete()) {

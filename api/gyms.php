@@ -428,8 +428,8 @@ function handlePut() {
                         
                         if ($update_stmt->execute()) {
                             // Elimina il vecchio file
-                            if (file_exists(__DIR__ . '/../' . $existing_image['percorso_immagine'])) {
-                                unlink(__DIR__ . '/../' . $existing_image['percorso_immagine']);
+                            if (file_exists(__DIR__ . '/backend/' . $existing_image['percorso_immagine'])) {
+                                unlink(__DIR__ . '/backend/' . $existing_image['percorso_immagine']);
                             }
                         } else {
                             // Se fallisce l'aggiornamento, elimina il nuovo file
