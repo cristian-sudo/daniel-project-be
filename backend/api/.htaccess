@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase /GymFinder_Vue_PHP/backend/api/
+
+# Se il file o directory non esiste, passa la richiesta al file PHP corrispondente
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/?$ $1.php [L] 
